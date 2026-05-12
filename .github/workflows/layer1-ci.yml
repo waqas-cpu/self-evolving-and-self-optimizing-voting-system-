@@ -1,0 +1,32 @@
+name: Layer1 CI
+
+on:
+  push:
+    paths:
+      - ".github/workflows/layer1-ci.yml"
+      - "layer 1/layer 1/**"
+  pull_request:
+    paths:
+      - ".github/workflows/layer1-ci.yml"
+      - "layer 1/layer 1/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "layer 1/layer 1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Verify Foundry
+        run: forge --version
+
+      - name: Run CI test script
+        run: bash ./script/ci-test.sh

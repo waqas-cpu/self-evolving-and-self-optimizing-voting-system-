@@ -1,0 +1,29 @@
+name: Layer2 CI
+
+on:
+  push:
+    paths:
+      - ".github/workflows/layer2-ci.yml"
+      - "layer 2/**"
+  pull_request:
+    paths:
+      - ".github/workflows/layer2-ci.yml"
+      - "layer 2/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "layer 2"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Run CI
+        run: bash ./script/ci-test.sh

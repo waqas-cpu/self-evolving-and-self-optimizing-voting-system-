@@ -1,0 +1,3 @@
+Layer2IntegrationTest:testEmergencyStopTogglesSafeMode() (gas: 59957)
+Layer2IntegrationTest:testIdentityGateAndProposalFlow() (gas: 860265)
+Layer2IntegrationTest:testParameterGateProposeApplyAndVeto() (gas: 11378)

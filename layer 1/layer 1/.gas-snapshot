@@ -1,0 +1,8 @@
+Layer1GateControllerTest:testCompromiseInterruptFreezesCredits() (gas: 378611)
+Layer1GateControllerTest:testInvariantRevokedCommitmentHasZeroCreditsAndCannotVote() (gas: 382746)
+Layer1GateControllerTest:testInvariantUniquenessDistinctEnrollmentsYieldDistinctCommitments() (gas: 541193)
+Layer1GateControllerTest:testProcessIdentityAndDeductVoteCost() (gas: 330938)
+Layer1GateControllerTest:testRejectDuplicateDid() (gas: 319614)
+Layer1GateControllerTest:testRejectInvalidBindingProof() (gas: 325655)
+Layer1GateControllerTest:testRejectInvalidEnrollmentProof() (gas: 29446)
+Layer1GateControllerTest:testRejectInvalidIssuer() (gas: 12505)

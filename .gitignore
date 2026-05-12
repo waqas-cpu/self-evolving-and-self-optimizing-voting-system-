@@ -1,0 +1,24 @@
+# Node / frontend
+**/node_modules/
+**/dist/
+**/.vite/
+*.log
+
+# Env / secrets
+.env
+.env.*
+
+# Foundry / Solidity artifacts
+**/out/
+**/cache/
+**/broadcast/
+**/artifacts/
+**/typechain/
+**/coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+

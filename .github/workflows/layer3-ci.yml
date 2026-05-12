@@ -1,0 +1,28 @@
+name: Layer 3 CI
+
+on:
+  push:
+    paths:
+      - "layer 3/**"
+      - ".github/workflows/layer3-ci.yml"
+  pull_request:
+    paths:
+      - "layer 3/**"
+      - ".github/workflows/layer3-ci.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "layer 3"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+      - name: Forge fmt, build, test
+        run: |
+          forge fmt --check
+          forge build
+          forge test -vv

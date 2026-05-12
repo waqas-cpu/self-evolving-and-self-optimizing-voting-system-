@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "chainlink-eth-usd",
+      "endpoint": "https://example.invalid/chainlink",
+      "weight": 1,
+      "kind": "oracle"
+    },
+    {
+      "id": "api3-eth-usd",
+      "endpoint": "https://example.invalid/api3",
+      "weight": 1,
+      "kind": "oracle"
+    },
+    {
+      "id": "pyth-eth-usd",
+      "endpoint": "https://example.invalid/pyth",
+      "weight": 1,
+      "kind": "oracle"
+    }
+  ]
+}
